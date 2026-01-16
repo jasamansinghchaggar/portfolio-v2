@@ -7,7 +7,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
     const { scrollRef } = useLocomotiveScroll();
 
     return (
-        <div ref={scrollRef} data-scroll-container className='min-h-screen w-screen relative bg-black text-zinc-50 p-4 lg:p-8 font-satoshi'>
+        <div ref={scrollRef} data-scroll-container className='min-h-screen w-screen relative bg-black text-zinc-50 p-4 lg:p-8 font-satoshi overflow-x-hidden'>
             <Header />
             <div data-scroll-section>
                 {children}
