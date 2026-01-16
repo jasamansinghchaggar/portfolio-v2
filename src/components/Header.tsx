@@ -3,19 +3,18 @@ import Magnet from './ui/Magnet'
 import { useMagnet } from '@/hooks/useMagnet';
 
 const navbarItems = [
-    { title: 'Home', href: '#home' },
+    { title: 'Home', href: '/' },
     { title: 'About', href: '#about' },
     { title: 'Projects', href: '#projects' },
     { title: 'Contact', href: '#contact' }
 ]
 
 const Header = () => {
-
     const isMagnetActive = useMagnet();
 
     return (
         <Fragment>
-            <nav className='w-full fixed top-0 left-0 p-8 flex items-center justify-between uppercase font-extralight'>
+            <nav className='w-full fixed top-0 left-0 flex items-center justify-between uppercase font-extralight mix-blend-difference p-4 lg:p-8 z-99999'>
                 {navbarItems.map((item, index) => (
                     <Magnet
                         padding={60}
