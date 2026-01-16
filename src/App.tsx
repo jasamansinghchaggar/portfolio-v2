@@ -1,6 +1,12 @@
+import MainLayout from '@/components/layouts/MainLayout';
+
 const App = () => {
   return (
-    <div>App</div>
+    <MainLayout>
+      <main className='min-h-screen pt-24 px-8 flex items-center justify-center font-satoshi'>
+        hello
+      </main>
+    </MainLayout>
   )
 }
 
