@@ -1,11 +1,10 @@
 import MainLayout from '@/components/layouts/MainLayout';
+import HeroSection from '@/components/HeroSection';
 
 const App = () => {
   return (
     <MainLayout>
-      <main className='min-h-screen pt-24 px-8 flex items-center justify-center font-satoshi'>
-        hello
-      </main>
+      <HeroSection />
     </MainLayout>
   )
 }
