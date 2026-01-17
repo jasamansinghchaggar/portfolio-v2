@@ -28,7 +28,7 @@ const ProjectsSection = () => {
         <section id="projects" className="h-max w-full bg-zinc-50 text-zinc-950 py-20">
             <div className="w-full px-4 lg:px-8 pb-6 flex justify-between">
                 <h1
-                    className="flex-1 uppercase text-[clamp(0.5rem,5vw,2rem)] font-light tracking-wider text-zinc-950"
+                    className="flex-1 uppercase text-[clamp(0.5rem,5vw,2rem)] font-light tracking-wider text-zinc-950 hover-text"
                 >
                     Projects
                 </h1>

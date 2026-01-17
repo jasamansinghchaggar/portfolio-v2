@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <Fragment>
-            <nav className='w-full fixed top-0 left-0 flex items-center justify-between uppercase font-extralight mix-blend-difference p-4 lg:p-8 z-99999'>
+            <nav className='w-full fixed top-0 left-0 flex items-center justify-between uppercase font-extralight mix-blend-difference p-4 lg:p-8 z-999'>
                 {navbarItems.map((item, index) => (
                     <Magnet
                         padding={60}
@@ -23,7 +23,7 @@ const Header = () => {
                         disabled={!isMagnetActive}
                     >
                         <a
-                            className='px-1.5 py-1 rounded-sm hover:bg-zinc-50 hover:text-zinc-950 transition-colors duration-300 text-[clamp(0.875rem,2vw,1rem)]'
+                            className='px-1.5 py-1 rounded-sm hover:bg-zinc-50 hover:text-zinc-950 transition-colors duration-300 text-[clamp(0.875rem,2vw,1rem)] remove-cursor'
                             href={item.href}
                         >
                             {item.title}

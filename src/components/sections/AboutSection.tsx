@@ -2,7 +2,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="h-max w-full flex flex-col gap-6 items-end px-4 lg:px-8 py-20">
       <h1
-        className="w-full uppercase text-[clamp(2rem,5vw,4rem)] font-light text-purple-500 tracking-wide"
+        className="w-full uppercase text-[clamp(2rem,5vw,4rem)] font-light text-purple-500 tracking-wide hover-text"
       >
         About Me
       </h1>
