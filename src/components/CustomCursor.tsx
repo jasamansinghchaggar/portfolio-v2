@@ -8,7 +8,7 @@ const CustomCursor: React.FC = () => {
   useEffect(() => {
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.classList.contains('hover-text')) {
+      if (target && target.classList && target.classList.contains('hover-text')) {
         gsap.to(cursorRef.current, {
           scale: 5,
           duration: 0.2,
@@ -19,7 +19,7 @@ const CustomCursor: React.FC = () => {
 
     const handleMouseLeave = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.classList.contains('hover-text')) {
+      if (target && target.classList && target.classList.contains('hover-text')) {
         gsap.to(cursorRef.current, {
           scale: 1,
           duration: 0.2,
@@ -41,7 +41,7 @@ const CustomCursor: React.FC = () => {
   useEffect(() => {
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.classList.contains('remove-cursor')) {
+      if (target && target.classList && target.classList.contains('remove-cursor')) {
         gsap.to(cursorRef.current, {
           opacity: 0,
           duration: 0.2,
@@ -52,7 +52,7 @@ const CustomCursor: React.FC = () => {
 
     const handleMouseLeave = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.classList.contains('remove-cursor')) {
+      if (target && target.classList && target.classList.contains('remove-cursor')) {
         gsap.to(cursorRef.current, {
           opacity: 1,
           duration: 0.2,
