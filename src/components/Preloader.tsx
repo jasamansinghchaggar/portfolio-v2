@@ -15,6 +15,7 @@ const Preloader = () => {
             ease: "power2.inOut",
         })
     })
+    
     return (
         <div ref={preloader} >
             <div className="preloader fixed top-0 left-0 h-full w-screen overflow-hidden px-8 lg:px-16 bg-white z-99999 flex items-end">

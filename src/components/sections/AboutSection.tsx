@@ -1,6 +1,49 @@
+import { useRef } from "react"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { SplitText } from "gsap/SplitText"
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
 const AboutSection = () => {
+  const about = useRef<HTMLDivElement>(null)
+
+  useGSAP(() => {
+    const splitHeading = new SplitText('h1', {
+      type: 'words',
+      mask: 'words'
+    })
+
+    const splitParagraph = new SplitText('p', {
+      type: 'lines',
+      mask: 'lines'
+    })
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: about.current,
+        start: 'top top',
+        end: '+=3000',
+        scrub: 1,
+        pin: true,
+      }
+    })
+
+    tl.from(splitHeading.words, {
+      yPercent: 1000,
+      stagger: 0.1,
+      ease: 'power1.out',
+    })
+      .from(splitParagraph.lines, {
+        yPercent: 1000,
+        stagger: 0.1,
+        ease: 'power1.out',
+      })
+  }, { scope: about })
+
   return (
-    <section id="about" className="h-max w-full flex flex-col gap-6 items-end px-4 lg:px-8 py-20">
+    <section ref={about} id="about" className="h-max w-full flex flex-col gap-6 items-end px-4 lg:px-8 pt-20 pb-40">
       <h1
         className="w-full uppercase text-[clamp(2rem,5vw,4rem)] font-light text-purple-500 tracking-wide hover-text"
       >

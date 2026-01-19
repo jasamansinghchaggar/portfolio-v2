@@ -1,6 +1,8 @@
-import { Fragment } from 'react'
+import { Fragment, useRef } from 'react'
 import Magnet from './ui/Magnet'
 import { useMagnet } from '@/hooks/useMagnet';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const navbarItems = [
     { title: 'Home', href: '/' },
@@ -11,10 +13,21 @@ const navbarItems = [
 
 const Header = () => {
     const isMagnetActive = useMagnet();
+    const nav = useRef<HTMLDivElement>(null);
+
+    useGSAP(() => {
+        gsap.from("nav a", {
+            delay: 5,
+            opacity: 0,
+            stagger: 0.3,
+            ease: "power2.out",
+            duration: 1.7
+        })
+    }, { scope: nav })
 
     return (
         <Fragment>
-            <nav className='w-full fixed top-0 left-0 flex items-center justify-between uppercase font-extralight mix-blend-difference p-4 lg:p-8 z-999'>
+            <nav ref={nav} className='w-full fixed top-0 left-0 flex items-center justify-between uppercase font-extralight mix-blend-difference p-4 lg:p-8 z-999'>
                 {navbarItems.map((item, index) => (
                     <Magnet
                         padding={60}
