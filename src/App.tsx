@@ -12,8 +12,8 @@ const App = () => {
       <Preloader />
       <MainLayout>
         <HeroSection />
-        <ServicesSection />
         <AboutSection />
+        <ServicesSection />
         <ProjectsSection />
         <ContactSection />
       </MainLayout>

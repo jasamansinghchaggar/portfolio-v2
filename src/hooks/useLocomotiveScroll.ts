@@ -23,6 +23,7 @@ export const useLocomotiveScroll = () => {
         touchMultiplier: 2,
       },
     });
+
     // Cleanup
     return () => {
       if (locomotiveScrollRef.current) {

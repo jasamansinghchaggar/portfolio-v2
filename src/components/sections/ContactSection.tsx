@@ -65,7 +65,7 @@ const ContactSection = () => {
     }, { scope: contact });
 
     return (
-        <section ref={contact} id='contact' className="h-max w-full bg-zinc-50 text-zinc-950 py-20 px-4 lg:px-8">
+        <section ref={contact} id='contact' data-scroll-section className="h-max w-full bg-zinc-50 text-zinc-950 py-20 px-4 lg:px-8">
             <h1 className="uppercase text-[clamp(2rem,5vw,4rem)] leading-[clamp(3rem,5vw,5rem)] tracking-tight font-light hover-text">
                 Let's talk about a <br />
                 project, collaboration or <br />
