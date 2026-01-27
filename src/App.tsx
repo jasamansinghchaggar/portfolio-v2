@@ -3,6 +3,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import ContactSection from '@/components/sections/ContactSection';
+import ServicesSection from '@/components/sections/ServicesSection';
 import Preloader from '@/components/Preloader';
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Preloader />
       <MainLayout>
         <HeroSection />
+        <ServicesSection />
         <AboutSection />
         <ProjectsSection />
         <ContactSection />

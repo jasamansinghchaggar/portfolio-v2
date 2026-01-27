@@ -23,7 +23,7 @@ const AboutSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: about.current,
-        start: 'top top',
+        start: 'top +=100',
         end: '+=3000',
         scrub: 1,
         pin: true,
@@ -43,7 +43,7 @@ const AboutSection = () => {
   }, { scope: about })
 
   return (
-    <section ref={about} id="about" className="h-max w-full flex flex-col gap-6 items-end px-4 lg:px-8 pt-20 pb-40">
+    <section ref={about} id="about" className="h-max w-full flex flex-col gap-6 items-end px-4 lg:px-8 pb-40">
       <h1
         className="w-full uppercase text-[clamp(2rem,5vw,4rem)] font-light text-purple-500 tracking-wide hover-text"
       >
